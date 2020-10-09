@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Rock+Salt&display=swap');
+
+    header{
+        position: relative;
+        width: 100%;
+        height: 100vh; 
+        display: grid; 
+        align-content: center;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+    body{
+        margin: 0;
+    }
+    header video{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -10;
+    }
+
+    main {
+        position: absolute;
+        top:0;
+        left:0;
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 50vh 50vh;
+        grid-template-areas: 
+            "a b "
+            "c d";               
+        padding: 0;
+        z-index: 10;
+        font-family: 'Mansalva', cursive;
+    }
+    main a{
+        text-align: center;
+        background-color:transparent;
+        display:block;
+        padding: 1rem;
+        text-decoration: none;
+        transition: background-color 2s, color 2s;
+        color:green;
+        width: min-content;
+        height: min-content;
+        border-radius: 4rem;
+        font-size: 1.5rem;
+    }
+    a:hover{
+        background-color: rgba(255,255, 255, 0.3);
+        color:white;
+    }
+    #link1{
+        text-align:left;
+        grid-area: a;
+        text-align: center;
+        margin-top:10%;
+        margin-left: 10%;
+        
+    }
+    #link2{
+        text-align: right;
+        grid-area: b;
+        margin-top:10%;
+        margin-left: 70%;
+    }
+    #link3{
+        text-align:left;
+        grid-area: c;
+        margin-top:25%;
+        margin-left: 10%;
+    }
+    #link4{
+        text-align:right;
+        grid-area: d;
+        margin-top:25%;
+        margin-left: 75%;
+    }
+
+    @keyframes play-1 {
+        0%{
+        color: transparent
+        }
+        25%{
+        color: white;
+        }
+        50%{
+        color: transparent;
+        }
+        75%{
+        color:transparent;
+        }
+        100%{
+        color:transparent;
+        } 
+    }
+    @keyframes listen-1 {
+        0%{
+        color:transparent;
+        }
+        25%{
+        color: transparent;
+        }
+        50%{
+        color:green;
+        }
+        75%{
+        color:transparent;
+        }
+        100%{
+        color: transparent;
+        } 
+    }
+    @keyframes act-1 {
+        0%{
+        color: transparent
+        }
+        25%{
+        color: transparent
+        }
+        50%{
+        color: transparent
+        }
+        75%{
+        color: orangered;
+        }
+        100%{
+        color:transparent;
+        } 
+    }
+    
+    @keyframes repeat-1 {
+        0%{
+        color: transparent;
+        }
+        25%{
+        color: transparent;
+        }
+        50%{
+        color: transparent;
+        }
+        75%{
+        color: transparent;
+        }
+        100%{
+        color:green;
+        } 
+    }
+    #first   {
+        animation-name: play-1;
+        animation-duration: 10s;
+        animation-iteration-count:infinite;
+        animation-direction:normal;
+        font-family: 'Mansalva', cursive;
+    }
+    #second   {
+        animation-name: listen-1;
+        animation-duration: 10s;
+        animation-iteration-count:infinite;
+        animation-direction: normal;
+        font-family: 'Mansalva', cursive;
+    }
+    #third   {
+        animation-name: act-1;
+        animation-duration: 10s;
+        animation-iteration-count:infinite;
+        animation-direction: normal;
+        font-family: 'Mansalva', cursive;
+    }
+    #fourth   {
+        animation-name: repeat-1;
+        animation-duration: 10s;
+        animation-iteration-count:infinite;
+        animation-direction: normal;
+        font-family: 'Mansalva', cursive;
+    }
+    #audioplayer-container {
+        position: fixed;
+        bottom:0;
+        right:0;
+        z-index: 1000;
+    }
+    
+    #pButton{
+    height:60px;
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-position: center;
+    
+    }
+
+    .play{
+        background: url('media/play.png') no-repeat;
+    }
+    .pause{
+        background: url('media/pause.png') no-repeat;
+    }

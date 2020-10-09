@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earth Act</title>
+      <!-- video : https://www.youtube.com/watch?v=tO1VLpVpu1g -->
+      <!--audios: https://soundbible.com-->
+
+    <link rel="stylesheet" href="index-style.css">
+</head>
+<body>
+    <header>
+        <h1><span id="first"> Play </span> <span id="second"> Listen </span> <span id="third"> Act </span><span id="fourth"> Repeat </span></h1>
+
+        <video autoplay loop poster="earth.jpg" muted>
+            <source src="media/videoearth.mp4" type="video/mp4">   
+            <img src="media/earth.jpg" alt="earth from space">
+        </video>
+
+        <div id="audioplayer-container">
+            <audio id="player" loop >
+                <source src="media/soundmix.mp3" type="audio/mp3">
+            </audio>
+            <button id="pButton" class="play" onclick="playAudio()"></button>
+        </div>
+    </header>
+
+    <main>
+        <a id="link1" href="https://www.savetheearth.org/">savetheearth.org</a>
+        <a id="link2" href="https://www.greenpeace.org/">greenpeace.org</a>
+        <a id="link3" href="http://www.climatenetwork.org/">climatenetwork.org</a>
+        <a id="link4" href="https://350.org/">350.org</a>
+    </main>
+
+</body>
+<script>
+    var music = document.getElementById('player');
+
+    function playAudio() {
+        if (player.paused) {
+            player.play();
+            pButton.className = "";
+            pButton.className = "pause";
+        } else {
+            player.pause();
+            pButton.className = "";
+            pButton.className = "play";
+        }
+}
+</script>
+</html>
